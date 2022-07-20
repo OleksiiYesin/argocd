@@ -1,18 +1,5 @@
-replicaCount: 2
-
-image:
-  repository: yesinaleksey/k8s-react
-  tag: v1
-  pullPolicy: IfNotPresent
+replicaCount: 3
 
 service:
   type: NodePort
   port: 80
-
-resources: {}
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}

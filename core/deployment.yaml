@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: my-pod
+  template:
+    metadata:
+      labels:
+        project: my-pod
+    spec:
+      containers:
+        - name : reactjs
+          image: yesinaleksey/k8s-react:v1
+          ports:
+            - containerPort: 80
